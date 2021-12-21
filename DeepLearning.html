@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Deep Learning - Audiobook</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="" class="logo">Audiobook Purchase Prediction</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Audiobook purchase prediction<br />
+									</h1>
+									<p>This deep learning model aims to predict whether the customer will purchase the audiobook again. The model can help the company to find
+										customers who are most likely to purchase again. This can help to reduce customer churn and identify high-value customers.
+									</p>
+								</header>
+								<div class="image main"><img src="images/deep_learning/image1.jpg" alt="" />Photo by <a href="https://unsplash.com/@shaktirajpurohit?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Shakti Rajpurohit</a> on <a href="https://unsplash.com/s/photos/audio-book?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+								</div>
+								
+
+
+
+								<h2>1.Extracting the data from csv<br />
+								</h3>
+								<p>Firstly, i will load the csv file and put my inputs and target as a variable.</p>
+								<div class="image main"><img src="images/deep_learning/image2.png" alt="" /></div>
+
+
+								<h2>2.Preprocessing of data<br />
+								</h2>
+
+								<h3>Balancing Dataset<br />
+								</h3>
+								<p>I will balance the number of 0s and 1s of my targets in my dataset. This is to ensure that my model would generate higher accuracy.
+								</p>
+								<div class="image main"><img src="images/deep_learning/image3.png" alt="" /></div>
+
+								<h3>Standardizing,Transforming and fitting the input<br />
+								</h3>
+								<p>Using Standard scaler,i will fit and transform the balanced input.</p>
+								<div class="image main"><img src="images/deep_learning/image4.png" alt="" /></div>
+
+								<h3>Shuffle<br/>
+								</h3>
+								<p>i shuffle the data to prevent the model from learning the order of the training and any bias</p>
+								<div class="image main"><img src="images/deep_learning/image5.png" alt="" /></div>
+
+								<h2>Splitting the dataset into training,testing and validation<br/>
+								</h2>
+								<p>i shuffle the data to prevent the model from learning the order of the training and any bias</p>
+								<div class="image main"><img src="images/deep_learning/image6.png" alt="" /></div>
+
+
+								<h2>3.Building the Deep Learning Model<br/>
+								
+									<h3>Loading of training,testing and validation data into the model<br/>
+									</h3>
+									<div class="image main"><img src="images/deep_learning/image7.png" alt="" /></div>
+
+									<h3>Building a Convolutional Neural Network(CNN)<br/>
+									</h3>
+										<p>For my CNN,there will be 10 inputs, 2 outputs of 1s and 0s and 2 Convolutional layers<br/>
+										</p>
+										<div class="image main"><img src="images/deep_learning/image8.png" alt="" /></div>
+
+										<h3>Model Fitting<br/>
+										</h3>
+											<div class="image main"><img src="images/deep_learning/image9.png" alt="" /></div>
+										
+								<h2>Results</h2><br/>	
+									<p>Based on the result as shown below, the model is 90% accurate.</p>
+									
+									<div class="image main"><img src="images/deep_learning/image10.png" alt="" /></div>
+									<p>Using model.predict with the test input, i am able to see how many numbers of customer will purchase the audiobook. "1" means it will purchase again while "0" means it will not purchase again<br/>
+									</p>
+									<div class="image main"><img src="images/deep_learning/image11.png" alt="" /></div>
+								
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						
+						
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
