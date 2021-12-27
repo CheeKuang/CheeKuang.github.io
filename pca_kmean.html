@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>PCA and K mean Clustering - Customer Segmentation</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="" class="logo">Customer Segmentation</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/chee-kuang-khoo/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+							<li><a href="https://github.com/CheeKuang/CheeKuang.github.io/tree/main/K%20mean%20clustering%20%2B%20PCA" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Customer Segmentation<br />
+									</h1>
+									<p>This model uses PCA and K mean clustering to segment the customers into different clusters. The use of PCA helps reduce the number of features, improving our algorithm's performance. 
+                                        By clustering the customers into different segments, it will help to understand the customer cluster better and maximize the value of the customer group as other clusters have different ways of approaching them.
+									</p>
+								</header>
+								<div class="image main"><img src="images/kmean_pca/image1.jpg" alt="" />Photo by <a href="https://unsplash.com/@ryoji__iwata?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ryoji Iwata</a> on <a href="https://unsplash.com/s/photos/group-of-people?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+								</a>
+								</div>
+								
+								<h2>Background</h2><br />
+
+								<p>This dataset consists of 2000 individuals from a store. The details were collected via their loyalty card. There are 8 columns in the dataset</p>
+								<ul>
+									<li>ID - individual Id</li>
+									<li>Sex - 0(Male) 1 (Female)</li>
+									<li>Marital Status - 0(single) 1 (not single)</li>
+									<li>Age - Age of individual</li>
+									<li>Education - 0(unknown) 1 (high school) 2(university) 3(Graduate School)</li>
+									<li>Income - Annual income in dollars</li>
+									<li>Occupation - 0(unemployed) 1(Skilled) 2(highly qualified)</li>
+									<li>Settlement Size - 0(small) 1(mid sized) 2(big) cities</li>
+								  </ul>  
+
+
+								<h2>1.Extracting the data from csv</h2><br />
+								</h3>
+								<p>Firstly, i will load the csv file in the form of a pandas' data frame.</p>
+								<div class="image main"><img src="images/kmean_pca/image2.png" alt="" /></div>
+
+
+								<h2>2.Exploring the data<br />
+								</h2>
+								
+								<h3>Checking the standard deviation and mean<br />
+								</h3>
+								<p>By checking the standard deviation and the mean, i am able to see if there is a need to standardize the data.</p>
+								<div class="image main"><img src="images/kmean_pca/imagedescribe.png" alt="" /></div>
+
+								<h3>Checking the skewness<br />
+								</h3>
+								<p>Check the skewness to see if there is a need in transforming the dataset. Since income is above 1, i will transform the income using log transformation.</p>
+								<div class="image main"><img src="images/kmean_pca/imageskew.png" alt="" /></div>
+
+
+								
+								
+								<h2>3.Preprocessing of data<br />
+								</h2>
+								
+								
+								<h3>Standardizing,Transforming and fitting the input<br />
+								</h3>
+								<p>Using Standard scaler,i will fit and transform the dataset to ensure that all features are treated equally.</p>
+								<div class="image main"><img src="images/kmean_pca/image3.png" alt="" /></div>
+
+								
+								
+								<h2>4.Principle Component Analysis<br />
+								</h2>
+								
+								<h3>Initializing PCA and fitting the scaled input<br />
+								</h3>
+								<p>Using Standard scaler,i will fit and transform the dataset to ensure that all features are treated equally.</p>
+								<div class="image main"><img src="images/kmean_pca/image4.png" alt="" /></div>
+								
+								
+								<h3>Deciding on number of features to keep<br/>
+								</h3>
+								<p>The PCA.explained_variance_ratio_ shows how much variance is being explained by each component. 
+									I plot a cumulative variance plot to see how many components I should keep using the explained variance ratio I got earlier.
+									I keep three components as a rule of thumb is to keep 80% of the variance.
+								</p>
+								<div class="image main"><img src="images/kmean_pca/image5_1.png" alt="" /></div>
+								<div class="image main"><img src="images/kmean_pca/image5_2.png" alt="" /></div>
+
+								
+								<h3>Performing PCA with choosen number of components<br />
+								</h3>
+								<p>I perform PCA with the number of components i choose. i also did fit and transformation</p>
+								<div class="image main"><img src="images/kmean_pca/image6.png" alt="" /></div>
+
+
+
+								<h2>5.Combining PCA and K mean clustering.<br/>
+								
+									<h3>Deciding on the number of cluster using the elbow method<br/>
+									</h3>
+									<div class="image main"><img src="images/kmean_pca/image7_!.png" alt="" /></div>
+									<div class="image main"><img src="images/kmean_pca/image7.png" alt="" /></div>
+
+									<h3>Implementing K mean<br/>
+									</h3>
+										<div class="image main"><img src="images/kmean_pca/image8.png" alt="" /></div>
+
+										
+								<h2>Results</h2><br/>	
+									<p>I used the first two components to plot the graph as the two components are the highest two components that can 
+                                        explain the variance. Compared to the first graph without PCA, the second graph with PCA visually separates the entire dataset.
+                                        Component 1 is plotted as the x-axis, while component 2 is plotted as the y axis.
+		
+									</p>
+
+									<div class="image main"><img src="images/kmean_pca/imagebefore.png" alt="" /></div>
+									
+									<div class="image main"><img src="images/kmean_pca/imagecomponent.png" alt="" /></div>
+
+
+									<p>I plotted a heatmap which show the correlation between the orignal variables and the component.Based on the heatmap <br>
+										Component 1 shows  high correlation of income , settlement size and occupation.<br>
+										Component 2 shows that there is a high correlation for education but low correlation for income.<br>
+										Component 3 shows high correlation for age.
+									</p>
+
+									<div class="image main"><img src="images/kmean_pca/imageheat.png" alt="" /></div>
+
+
+									<p>With the information of the component based from the heatmap, <Br>
+										
+										Segment k means pca 0 shows cluster of customers who are career focused due to high mean of component 1 and 3<br>
+										Segment k means pca 1 shows cluster of customers who are low wage job due to low mean of component 1 and 2 but high mean of component 3 <br>
+										Segment k means pca 2 shows cluster of customers who are well off due to high mean of all 3 components <br> 
+										Segment k means pca 3 shows cluster of customers who are students based on high mean of component 2 but low on component 1 and 3.</p>
+
+									<div class="image main"><img src="images/kmean_pca/imagecluster.png" alt="" /></div>
+
+
+									
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						
+						
+						
+						
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

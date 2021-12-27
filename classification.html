@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Classification - Heart Disease Prediction</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="" class="logo">Heart Disease Prediction</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/chee-kuang-khoo/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+							<li><a href="https://github.com/CheeKuang/CheeKuang.github.io/tree/main/Classification" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Heart Disease Prediction<br />
+									</h1>
+									<p>This project used the Support Vector Machine(SVM) machine learning model to predict whether the patient with specific attributes such as Cholesterol will lead to heart disease.
+                                        This machine learning model will help people detect whether they are at risk of heart disease. With early detection of heart disease, it can reduce suffering and prevents complications such as heart failure.</p>
+								</header>
+								<div class="image main"><img src="images/classification/image1.jpg" alt="" />Photo by <a href="https://unsplash.com/@jessedo81?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">jesse orrico</a> on <a href="https://unsplash.com/s/photos/heart-disease?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+								</a>
+								</a>
+								</div>
+								
+								<h2>Background</h2><br />
+
+								<p>This dataset consists of 918 observations and a total of five heart datasets are combined together to form this dataset. There are 12 columns in the dataset</p>
+								<ul>
+									<li>Age - Age of Patient</li>
+									<li>Sex - Male or Female</li>
+									<li>ChestPainType - Type of Chest Pain</li>
+									<li>RestingBP- Resting Blood Pressure</li>
+									<li>Cholesterol - serum cholesterol</li>
+									<li>FastingBS - 1(FastingBS > 120 mg/dl) , 0(less than 120/mg/dl)</li>
+									<li>ExerciseAngina: exercise-induced angina  </li>
+									<li>Oldpeak - oldpeak = ST</li>
+									<li>ST_Slope - the slope of the peak exercise ST segment</li>
+									<li>HeartDisease - 1(heart disease), 0 (Normal)</li>
+								  </ul>  
+
+
+								<h2>1.Extracting the data from csv</h2><br />
+								</h3>
+								<p>Firstly, i will load the csv file in the form of a pandas' data frame.</p>
+								<div class="image main"><img src="images/classification/image2.png" alt="" /></div>
+
+
+								<h2>2.Exploring the data<br />
+								</h2>
+								
+								<h3>Checking the data type and missing values<br />
+								</h3>
+
+								<div class="image main"><img src="images/classification/image3.png" alt="" /></div>
+
+							
+
+								
+								
+								<h2>3.Preprocessing of data<br />
+								</h2>
+								
+								
+								<h3>Converting of Categorical to Numerical<br />
+								</h3>
+								<p>As there are some object data type in the dataset, i will do encoding to convert them to int data type.</p>
+								<div class="image main"><img src="images/classification/image4.png" alt="" /></div>
+
+								
+								
+								<h2>4.Splitting the dataset<br />
+								</h2>
+								
+								<h3>Splitting the dataset into dependent and independent variables.<br />
+								</h3>
+								<p>i will split the dataset into 'HeartDisease' as a dependent variable while the other variables as independent variables.
+								</p>
+								<div class="image main"><img src="images/classification/image5.png" alt="" /></div>
+								<div class="image main"><img src="images/classification/image6.png" alt="" /></div>
+								
+								
+								<h3>5.Choosing the best machine algorithm for the prediction<br/>
+								</h3>
+								<p>I use GridsearchCV with SVM, Random forest, and logistic regression to determine which of the three algorithms will be the most suitable. 
+								</p>
+								<div class="image main"><img src="images/classification/image7.png" alt="" /></div>
+								<div class="image main"><img src="images/classification/image8.png" alt="" /></div>
+								<br>
+								<p>Based on the result, as shown above, SVM has the best score, and in conclusion, SVM is the best model for predicting heart disease. </p>
+							
+								
+
+								
+								<h3>Result<br />
+								</h3>
+								<p>Based on the classification report, The recall value is 0.84. The value seems to be quite good. Recall measures the proportion of actual positives that the model captured by labeling it true positive. The high recall value is critical as there is a high cost of associated false negatives. 
+									For instance, the test indicated that the patient does not have heart disease when actually, the patient has heart disease.</p>
+								<div class="image main"><img src="images/classification/image9.png" alt="" /></div>
+
+
+
+
+
+									
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						
+						
+						
+						
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Automated Gym Booking</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="" class="logo">Automated Gym Booking</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/chee-kuang-khoo/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+							<li><a href="https://github.com/CheeKuang/CheeKuang.github.io/tree/main/Web%20Scrapping" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Automated Gym Booking<br />
+									</h1>
+									<p>This project used selanium for automated gym booking for gymboxx. Once the time reaches 8pm, the project will run automatically and booked the 8pm time slot for the user for the following day.</p>
+								</header>
+								<div class="image main"><img src="images/webscrapping/image1.jpg" alt="" />Photo by <a href="https://unsplash.com/@hipcravo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sushil Ghimire</a> on <a href="https://unsplash.com/s/photos/gym?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                                </a>
+								</a>
+								</a>
+								</div>
+								
+                                <h2>Background</h2><br />
+
+								<p>This is the booking page for Gymboxx users to book their desired time slots and location of the gym.</p>
+
+                                <div class="image main"><img src="images/webscrapping/imagebg.png" alt="" /></div>
+
+								<h2>1.Importing the libaries and Preparation</h2><br />
+								</h3>
+								<p>Firstly, i will import the libaries required for the automation and key in the details required for booking of gym.
+                                    <br>
+                                    *Mobile Number,Email and Gymboxx ID is not in the screenshot due to privacy issues*
+                                </p>
+								<div class="image main"><img src="images/webscrapping/image2.png" alt="" /></div>
+
+
+								<h2>2.Initializing Chrome Webdriver<br />
+								</h2>
+								
+								<div class="image main"><img src="images/webscrapping/imagechrome.png" alt="" /></div>
+
+							
+
+								
+								
+								<h2>3.Automated Booking<br />
+								</h2>
+								
+								<p>In the while loop, the if loop will check if the current time was greater than the booking time, which is 8 pm. if the current time is greater than 8 pm,
+                                    the driver will find the element that has the outlet and then click it. The driver will then select the date
+                                    and the timeslot. Lastly, it will proceed to key in the mobile number and the gymboxx id and click on the submit button.
+								</p>
+								<div class="image main"><img src="images/webscrapping/imagelast.png" alt="" /></div>
+								<div class="image main"><img src="images/webscrapping/imageexample.png" alt="" /></div>
+
+
+
+								<h2>4.Booking Success<br />
+								</h2>
+								<p>Once booking is success, an otp will be send to the user to confirm the booking</p>
+								<div class="image main"><img src="images/webscrapping/imageotp.png" alt="" /></div>
+
+
+
+
+									
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						
+						
+						
+						
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
