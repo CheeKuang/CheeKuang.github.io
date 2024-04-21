@@ -88,21 +88,23 @@
 								</h2>
 								
 								
-								<h3>Converting of Categorical to Numerical<br />
-								</h3>
-								<p>As there are some object data type in the dataset, i will do encoding to convert them to int data type.</p>
-								<div class="image main"><img src="images/classification/image4.png" alt="" /></div>
-								
+			
 		
 								<h3>Label Encoding<br />
 								</h3>
-								<p>As there are some object data type in the dataset, i will do encoding to convert them to int data type.</p>
+								<p>I will convert categorical data into numerical data that can be used for analysis and modelling.</p>
 								<div class="image main"><img src="images/classification/image4.png" alt="" /></div>
 
+
+								<h3>Scaling some variables<br />
+								</h3>
+								<p>I incorporated standard scaling on Age, Resting Blood Pressure (RestingBP), Cholesterol, and Maximum Heart Rate (MaxHR) to enhance the performance and accuracy of the machine learning models. This preprocessing step helps in normalizing the features, making them more comparable and potentially improving the models' effectiveness. .</p>
+								<div class="image main"><img src="images/classification/standard.png" alt="" /></div>
+
 		
 		
 
-								
+	
 								
 								<h2>4.Splitting the dataset<br />
 								</h2>
@@ -117,7 +119,7 @@
 								
 								<h3>5.Choosing the best machine algorithm for the prediction<br/>
 								</h3>
-								<p>I use GridsearchCV with SVM, Random forest, and logistic regression to determine which of the three algorithms will be the most suitable. 
+								<p>I utilized GridSearchCV with SVM, Random Forest, and Logistic Regression to select the most appropriate algorithm for predicting heart diseases, alongside determining the optimal parameters for each algorithm. 
 								</p>
 								<div class="image main"><img src="images/classification/image7.png" alt="" /></div>
 								<div class="image main"><img src="images/classification/image8.png" alt="" /></div>
@@ -129,9 +131,16 @@
 								
 								<h3>Result<br />
 								</h3>
-								<p>Based on the classification report, The recall value is 0.84. The value seems to be quite good. Recall measures the proportion of actual positives that the model captured by labeling it true positive. The high recall value is critical as there is a high cost of associated false negatives. 
-									For instance, the test indicated that the patient does not have heart disease when actually, the patient has heart disease.</p>
-								<div class="image main"><img src="images/classification/image9.png" alt="" /></div>
+								<p>Based on the classification report, The recall value is 0.82. The value seems to be quite good. Recall measures the proportion of actual positives that the model captured by labeling it true positive. The high recall value is critical as there is a high cost of associated false negatives. For instance, the test indicated that the patient does not have heart disease when actually, the patient has heart disease.</p>
+								<div class="image main"><img src="images/classification/class_report.png" alt="" /></div>
+
+
+								<h3>AUC ROC curve<br />
+								</h3>
+								<p>
+									With an AUC of 0.89, the model is able to correctly classify the positive and negative instances about 89% of the time, which is considered very good.
+								</p>
+								<div class="image main"><img src="images/classification/AUC_ROC curve.png" alt="" /></div>
 
 
 
