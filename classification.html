@@ -114,7 +114,20 @@
 								<p>i will split the dataset into 'HeartDisease' as a dependent variable while the other variables as independent variables.
 								</p>
 								<div class="image main"><img src="images/classification/image5.png" alt="" /></div>
-								<div class="image main"><img src="images/classification/image6.png" alt="" /></div>
+
+
+								<h3>Class Imbalance.<br />
+								</h3>
+								<p>I applied SMOTE after splitting data to addresse class imbalance by generating synthetic samples for the minority class. This prevents data leakage by ensuring synthetic samples are generated solely based on training data, enhancing model generalization.
+								</p>
+								<div class="image main"><img src="images/classification/not_balance.png" alt="" /></div>
+								<div class="image main"><img src="images/classification/smote.png" alt="" /></div>
+
+
+
+
+
+								
 								
 								
 								<h3>5.Choosing the best machine algorithm for the prediction<br/>
@@ -122,25 +135,25 @@
 								<p>I utilized GridSearchCV with SVM, Random Forest, and Logistic Regression to select the most appropriate algorithm for predicting heart diseases, alongside determining the optimal parameters for each algorithm. 
 								</p>
 								<div class="image main"><img src="images/classification/image7.png" alt="" /></div>
-								<div class="image main"><img src="images/classification/image8.png" alt="" /></div>
+								<div class="image main"><img src="images/classification/report.png" alt="" /></div>
 								<br>
-								<p>Based on the result, as shown above, SVM has the best score, and in conclusion, SVM is the best model for predicting heart disease. </p>
+								<p>Based on the result, as shown above, SVM has the best score with the parameter of c:1 and kernel: rbf, and in conclusion, SVM is the best model for predicting heart disease. </p>
 							
 								
 
 								
 								<h3>Result<br />
 								</h3>
-								<p>Based on the classification report, The recall value is 0.82. The value seems to be quite good. Recall measures the proportion of actual positives that the model captured by labeling it true positive. The high recall value is critical as there is a high cost of associated false negatives. For instance, the test indicated that the patient does not have heart disease when actually, the patient has heart disease.</p>
-								<div class="image main"><img src="images/classification/class_report.png" alt="" /></div>
+								<p>Based on the classification report, The recall value is 0.86. The value seems to be quite good. Recall measures the proportion of actual positives that the model captured by labeling it true positive. The high recall value is critical as there is a high cost of associated false negatives. For instance, the test indicated that the patient does not have heart disease when actually, the patient has heart disease.</p>
+								<div class="image main"><img src="images/classification/report_1.png" alt="" /></div>
 
 
 								<h3>AUC ROC curve<br />
 								</h3>
 								<p>
-									With an AUC of 0.89, the model is able to correctly classify the positive and negative instances about 89% of the time, which is considered very good.
+									With an AUC of 0.97, the model is able to correctly classify the positive and negative instances about 89% of the time, which is considered very good.
 								</p>
-								<div class="image main"><img src="images/classification/AUC_ROC curve.png" alt="" /></div>
+								<div class="image main"><img src="images/classification/AUC.png" alt="" /></div>
 
 
 
